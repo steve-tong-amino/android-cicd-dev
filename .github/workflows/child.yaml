@@ -1,0 +1,22 @@
+name: Child
+
+on: workflow_call
+
+jobs:
+  job-1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "github.workflow = ${{ github.workflow }}"
+          echo "github.run_id = ${{ github.run_id }}"
+          echo "github.run_number = ${{ github.run_number }}"
+          echo "github.job" = ${{ github.job }}
+
+  job-2:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "github.workflow = ${{ github.workflow }}"
+          echo "github.run_id = ${{ github.run_id }}"
+          echo "github.run_number = ${{ github.run_number }}"
+          echo "github.job" = ${{ github.job }}
